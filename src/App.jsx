@@ -203,15 +203,17 @@ function App() {
 
                         <div className="pagination">
                             <div className="count">
-                                <span style={{ textTransform: "capitalize" }}>
-                                    page no. {activePage} out of{" "}
-                                    {Math.ceil(data?.length / 6)}
+                                <span>
+                                    Showing {activePage * 6 < data?.length ? activePage * 6: data?.length} results out of{" "}
+                                    {data?.length}
                                 </span>
                             </div>
                             <div className="next-prev-btn">
                                 {activePage > 1 && (
                                     <button onClick={prevPage}>prev</button>
                                 )}
+                                <span>page no. {activePage} out of{" "}
+                                    {Math.ceil(data?.length / 6)}</span>
                                 {data?.length / activePage > 6 && (
                                     <button onClick={nextPage}>next</button>
                                 )}
