@@ -212,7 +212,7 @@ function App() {
                                 {activePage > 1 && (
                                     <button onClick={prevPage}>prev</button>
                                 )}
-                                <span>page no. {activePage} out of{" "}
+                                <span>Page {activePage} of{" "}
                                     {Math.ceil(data?.length / 6)}</span>
                                 {data?.length / activePage > 6 && (
                                     <button onClick={nextPage}>next</button>
